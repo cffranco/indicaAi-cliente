@@ -60,4 +60,10 @@ public class IndicacaoController {
         service.excluirIndicacao(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+    
+    @GetMapping("/nindicacao/{id}")
+    public Integer contarIndicacao(@PathVariable Long id) {
+        return service.contarIndicacao(id);
+                
+    }
 }

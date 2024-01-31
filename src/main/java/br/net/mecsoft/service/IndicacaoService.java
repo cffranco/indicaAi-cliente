@@ -44,6 +44,10 @@ public class IndicacaoService {
 		return repository.findById(id).map(indicacao -> modelMapper.map(indicacao, IndicacaoDTO.class));
 	}
 
+	public Integer contarIndicacao(Long id) {
+		return repository.contarIndicacao(id);
+	}
+	
 	public IndicacaoDTO cadastrarIndicacao(IndicacaoDTO indicacaoDTO) {
 		
 		//verificar se indicou 
